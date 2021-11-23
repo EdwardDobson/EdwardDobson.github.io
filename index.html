@@ -60,7 +60,31 @@ introduction
     display: block;
     width: 840px; 
 }
- 
+.container {
+  position: relative;
+  width: 50%;
+}
+.container img {
+  width: 100%;
+  height: auto;
+}
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .btn:hover {
+  background-color: black;
+} 
  .profileImageAligned
   {
       display: flex;
@@ -112,10 +136,14 @@ introduction
 <h1>Edward Dobson</h1>
 <h2>Games Programmer</h2>
     <div class="dropdown">
-  <button>HubSpot Resources</button>
-  <div class="dropdown-content">
+       <div class="container">
+        <img src="img_snow.jpg" alt="Snow">
+        <button class="btn">Button</button>
+           <div class="dropdown-content">
    <a href="Jazz&Azul.html">Jazz And Azul</a>
    <a href="BugOpsArcade.html">BugOpsArcade</a>
+</div> 
+
   </div>
     <div class="profileImageAligned">
           <img src = "Assets/ProfilePicture.jpg" alt="Me" style="width:200px;height:200px;margin:0px 0px 50px 350px;">     
