@@ -48,10 +48,56 @@
   body{
      background-color: #346D58;
     }
+.container {
+  position: relative;
+  width: 50px;
+  }
+.container img {
+  width: 50px;
+  height: auto;
+}
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .btn:hover {
+  background-color: black;
+} 
+ .profileImageAligned
+  {
+    display: flex;
+    align-items: center;
+  }
+  .dropdown 
+  {
+  display: inline-block;
+  position: relative;
+}
 </style>
 </head>
 <body>
   <Title>Bug Ops Arcade!</Title>
+    <div class="dropdown">
+       <div class="container">
+        <img src="Assets/DropdownImage.png" alt="DropdownImage">
+           <div class="dropdown-content">
+               <a href="index.html">Home</a>
+               <a href="Jazz&Azul.html">Jazz And Azul</a>
+              <a href="SoleSweep.html">Sole Sweep</a>    
+               <a href="Contact Me.html">Contact Me</a>
+              
+           </div>
+         </div>
+      </div>
   <DescriptionTitle> Description </DescriptionTitle>
   <description> Bug Ops Arcade was made in 2.5 days, this did not include the art assets.
     <br>I worked on the shooting, weapon pickup, level loading, in game UI, the mini map and the shop system.</br> </description>
