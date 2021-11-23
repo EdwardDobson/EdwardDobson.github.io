@@ -24,11 +24,11 @@ h2{
   font-weight: bold;
   text-align:center;
   font-family:calibri;
-    color: #E5E9E9;
-}
-body {
-        background-color: #346D58;
-     }
+  color: #E5E9E9;
+  }
+body{
+     background-color: #346D58;
+    }
 introduction
   {
     display: block;
@@ -42,16 +42,25 @@ introduction
     font-family:calibri;
     color: #E5E9E9;
   }
+ .profileImageAligned
+  {
+      display: flex;
+      align-items: center;
+  }
 </style>
 </head>
 <body>
 <h1>Edward Dobson</h1>
 <h2>Games Programmer</h2>
-
-<img src = "Assets/ProfilePicture.jpg" alt="Me" style="width:150px;height:150px;margin:0px 0px 50px 250px;">
+    <div class="aligned">
+      <img src = "Assets/ProfilePicture.jpg" alt="Me" style="width:150px;height:150px;margin:0px 0px 50px 350px;">
 <introduction> I'm Edward. I have just finished studying a Masters degree at Teesside University in Computer Games Programming with a first. </introduction>
 <introduction> I have been playing video games for most of my life ever since I first played the original Rayman on the PlayStation 1 nearly 14 yrs ago. 
   Over the years I have grown to love multiple game genres including strategy, first person shooters and Role Playing Games.  </introduction>
-<introduction> When playing I like to think about how I would approach a certain mechanic and then sometimes try to recreate these mechanics in my own projects. I also like experimenting with smaller game engines such as Godot and using development tools that aren’t required for my role.  </introduction>
+<introduction> When playing I like to think about how I would approach a certain mechanic and then sometimes try to recreate these mechanics in my own projects. 
+  I also like experimenting with smaller game engines such as Godot and using development tools that aren’t required for my role.  </introduction>
+    </div>
+
+
 </body>
 </html>
