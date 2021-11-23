@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  Title{
+  display: block;
+  font-size: 4em;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  text-align:center;
+  font-family:calibri;
+  color: #E5E9E9;
+  }
+    DescriptionTitle{
+  display: block;
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 200px;
+  margin-right: 0;
+  font-weight: bold;
+  text-align:left;
+  font-family:calibri;
+  color: #E5E9E9;
+  }
+  description
+  {
+    display: block;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: 200px;
+    margin-right: 0;
+    font-weight: bold;
+    font-family:calibri;
+    color: #E5E9E9;
+  }
+  body{
+     background-color: #346D58;
+    }
+  .container {
+  position: relative;
+  width: 50px;
+  }
+.container img {
+  width: 50px;
+  height: auto;
+}
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .btn:hover {
+  background-color: black;
+} 
+  .dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 125px;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  color: #E5E9E9;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #00A4BD;
+}
+</style>
+</head>
+<body>
+  <h1>Cuber</h1>
+     <div class="dropdown">
+       <div class="container">
+        <img src="Assets/DropdownImage.png" alt="DropdownImage">
+           <div class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="ContactMe.html">Contact Me</a>
+                  <a href="Jazz&Azul.html">Jazz And Azul</a>
+                  <a href="SoleSweep.html">Sole Sweep</a>   
+                  <a href="BugOpsArcade.html">BugOps Arcade</a>
+           </div>
+           </div>
+        </div>
+<DescriptionTitle>Games Programmer</DescriptionTitle>
+  <description>CUBER was developed by me and a single designer as part of my masters year. 
+    The game was developed in Unity and written in C#. All of the systems that are in the game were developed by me.</description>
+  <video width="1280" height="480" controls>
+  <source src="Assets/Cuber Gameplay.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  <a href="https://github.com/EdwardDobson/CUBER">
+      <img src="Assets/GitHub-Mark-Light-120px-plus.png" alt="GitHub-Mark-Light-120px-plus" style="width:50px;height:50px;margin:0px 0px 50px 50px;">
+    </a>
+ <a href="https://edwarddobson.itch.io/cuber">
+      <img src="Assets/ItchLogo.png" alt="ItchLogo.png" style="width:150px;height:50px;margin:0px 0px 0px 200px;">
+    </a>
+</body>
+</html>
