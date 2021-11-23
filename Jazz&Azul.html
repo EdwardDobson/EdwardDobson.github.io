@@ -41,11 +41,74 @@
   body{
      background-color: #346D58;
     }
+  .container {
+  position: relative;
+  width: 50px;
+  }
+.container img {
+  width: 50px;
+  height: auto;
+}
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .btn:hover {
+  background-color: black;
+} 
+ .profileImageAligned
+  {
+    display: flex;
+    align-items: center;
+  }
+  .dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 125px;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  color: #E5E9E9;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #00A4BD;
+}
 </style>
 </head>
 <body>
   <Title>Jazz And Azul</Title>
   <DescriptionTitle> Description </DescriptionTitle>
+     <div class="dropdown">
+       <div class="container">
+        <img src="Assets/DropdownImage.png" alt="DropdownImage">
+           <div class="dropdown-content">
+            <a href="index.html">Homel</a>
+              <a href="BugOpsArcade.html">BugOps Arcade</a>
+                 <a href="SoleSweep.html">Sole Sweep</a>
+           </div>
+           </div>
+        </div>
   <description> Jazz & Azul (2021) is a first person story focused game, that follows the story of two kids that live in vastly different worlds trying to meet for the first time. </description>
     <br>I have mainly been focusing on the programming side but I have helped with some parts of the 3D artwork. These include unwrapped and texturing.</br>
 </body>
