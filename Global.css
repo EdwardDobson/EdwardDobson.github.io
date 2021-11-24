@@ -117,6 +117,7 @@ introduction
 }
 codeDisplay {
   font-family:calibri;
+  font-weight: bold;
   color: #E5E9E9;
   padding: 2px;
   font-size: 1em;
