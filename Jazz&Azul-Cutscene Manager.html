@@ -59,5 +59,37 @@ public void PlayCutscene(string _cutsceneName)
     }
 </codeDisplay></pre>
  <descriptionInfo> <br>SkipCutscene() has a timer that ticks down and when it reaches zero the clip is stopped and the games load function starts.</br></descriptionInfo>
+<codeDisplay><pre>
+public void SkipCutscene()
+    {
+        if (Input.GetKey(KeyCode.Space) &amp;&amp; videoPlayer.isPlaying)
+        {
+            SkipTimer -= Time.deltaTime;
+            skipSprite.gameObject.SetActive(true);
+            skipSprite.fillAmount = SkipTimer;
+            if (SkipTimer &lt;= 0)
+            {
+                SkipTimer = 0;
+                clipLength = 0;
+                videoPlayer.Stop();
+                videoPlayer.clip = null;
+                playingCutscene = false;
+                videoCanvas.SetActive(false);
+                SubtitleManager.Self.SetActive(false);
+                GameManagement.Instance.StopAllCoroutines();
+                if (cutsceneDataInUse.ShouldLoadScene)
+                    GameManagement.Instance.LoadScene(cutsceneDataInUse.SceneToLoadIndex);
+                GameManagement.Instance.PlayerCanMove = true;
+                StopAllCoroutines();
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.Space) &amp;&amp; videoPlayer.isPlaying)
+        {
+            skipSprite.gameObject.SetActive(false);
+            SkipTimer = skipTimerResetValue;
+            skipSprite.fillAmount = skipTimerResetValue;
+        }
+    }
+ </codeDisplay></pre>
 </body>
 </html>
