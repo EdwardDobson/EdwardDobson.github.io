@@ -102,16 +102,11 @@ introduction
   color: #FFFFFF;
   background-color: #00A4BD;
 }
-
-.columnButton {
-  float: left;
-  width: 50%;
-  padding: 5px;
+.row {
+  display: flex;
 }
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-} 
+.columnButton {
+  flex: 50%;
+  padding: 5px;
+}
