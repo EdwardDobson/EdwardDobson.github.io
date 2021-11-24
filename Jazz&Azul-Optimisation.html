@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel = "stylesheet" href = "Global.css">
+</head>
+<body>
+      <div class="dropdown">
+       <div class="container">
+        <img src="Assets/DropdownImage.png" alt="DropdownImage">
+           <div class="dropdown-content">
+               <a href="index.html">Home</a>
+               <a href="ContactMe.html">Contact Me</a>
+               <a href="BugOpsArcade.html">BugOps Arcade</a>
+               <a href="SoleSweep.html">Sole Sweep</a>
+               <a href="Cuber.html">Cuber</a>
+               <a href="DungeonGenerator.html">Dungeon Generator</a>
+		           <a href="Jazz&Azul.html">Jazz And Azul</a>
+           </div>
+           </div>
+        </div>
+  <pageTitle>Optimisation</pageTitle>
+
+
+  <descriptionInfo> When I first got the build for the game was horrible, hitting 80-100% usage on both my GTX 1070 and i7 9700k. 
+    <br>With the games art style being simple and low poly I knew something was wrong.</br>
+	<br>When trying to find out the cause of this issue I noticed that the batch call amount was hitting 20-30k.</br>
+  <br>To reduce this I implemented Occlusion Culling which helped reduce the amount of batches massively.</br>
+    <br>However they were still hovering around 2-5k in places, 
+    this was due to the previous artist having several materials on one object rather than creating UV maps for them.</br>
+    <br>To reduce the material amount I imported the models back into Blender removed unnecessary polygons and creating UV maps.</br>
+      <br>This allowed me to static batch common objects, reducing the total.</br>
+  </descriptionInfo>
+</body>
+</html>
