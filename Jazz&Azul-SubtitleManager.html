@@ -23,11 +23,12 @@
   <descriptionInfo> To add more accessibility to the game I worked on implementing subtitles to the cut scenes and world dialogue. 
     <br>There are two functions that make up the manager the first is CreateSubtitleData() 
     that you can see below this function takes in a text file then splits each line and adds them into the string list.</br>
-	After this I go through each line and find ones that just have numbers on this means they are timings and add them to their own list.
+	<br>After this I go through each line and find ones that just have numbers on this means they are timings and add them to their own list.
 	The second function displays the subtitle there is a wait delay this is used to display 
-	the subtitles slightly later if the dialogue starts later in the cut scene.
+	the subtitles slightly later if the dialogue starts later in the cut scene.</br>
 	I loop through each string and update the text element after the current delay.
   </descriptionInfo>
+ <descriptionTitle> Playsubtitles Function </descriptionTitle>
 <codeDisplay><pre>
 public static IEnumerator PlaySubtitles(TextAsset _subtitleFile, float _waitDelay)//This coroutine is called when playing subtitles.
   {
