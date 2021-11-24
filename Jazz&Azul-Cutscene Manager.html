@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel = "stylesheet" href = "Global.css">
+</head>
+<body>
+      <div class="dropdown">
+       <div class="container">
+        <img src="Assets/DropdownImage.png" alt="DropdownImage">
+           <div class="dropdown-content">
+               <a href="index.html">Home</a>
+               <a href="ContactMe.html">Contact Me</a>
+               <a href="BugOpsArcade.html">BugOps Arcade</a>
+               <a href="SoleSweep.html">Sole Sweep</a>
+               <a href="Cuber.html">Cuber</a>
+               <a href="DungeonGenerator.html">Dungeon Generator</a>
+		           <a href="Jazz&Azul.html">Jazz And Azul</a>
+           </div>
+           </div>
+        </div>
+  <pageTitle>Cutscene Manager</pageTitle>
+
+  <descriptionInfo> Originally the video clips would just play and the player would have no ability to skip or pause them. 
+    <br>So I implemented the functionality to do so. The two main functions are PlayCutscene() and SkipCutscene().</br>
+	<br>To play a cut scene you add the file to the cutscene manager and input its name.</br>
+  </descriptionInfo>
+[code lang = "csharp"]
+public void PlayCutscene(string _cutsceneName)
+    {
+        videoPlayer.clip = null;
+        SkipTimer = 1;
+        for (int i = 0; i &lt; CutsceneDatas.Length; i++)
+        {
+            if (CutsceneDatas[i].Clip.name == _cutsceneName)
+            {
+                cutsceneDataInUse = CutsceneDatas[i];
+                videoPlayer.clip = cutsceneDataInUse.Clip;
+            }
+        }
+        if (videoPlayer.clip != null)
+        {
+            clipLength = videoPlayer.clip.length;         
+            RenderTexture rt = RenderTexture.active;
+            RenderTexture.active = videoImage;
+            GL.Clear(true, true, Color.clear);
+            RenderTexture.active = rt;
+            videoCanvas.SetActive(true);
+            videoPlayer.Play();
+            if (GameManagement.Instance.GetSettingValue("SubtitlesState") == 1 ? true : false)
+            {               StartCoroutine(SubtitleManager.PlaySubtitles(cutsceneDataInUse.SubtitleAsset,0.5f));
+            }
+            playingCutscene = true;
+            GameManagement.Instance.PlayerCanMove = false;
+        }
+        else
+        {
+            Debug.LogError("No cutscene found: Make sure the correct name is used");
+        }
+    }
+[/code]
+</body>
+</html>
