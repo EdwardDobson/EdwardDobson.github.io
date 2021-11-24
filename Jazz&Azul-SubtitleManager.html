@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel = "stylesheet" href = "Global.css">
+</head>
+<body>
+      <div class="dropdown">
+       <div class="container">
+        <img src="Assets/DropdownImage.png" alt="DropdownImage">
+           <div class="dropdown-content">
+               <a href="index.html">Home</a>
+               <a href="ContactMe.html">Contact Me</a>
+               <a href="BugOpsArcade.html">BugOps Arcade</a>
+               <a href="SoleSweep.html">Sole Sweep</a>
+               <a href="Cuber.html">Cuber</a>
+               <a href="DungeonGenerator.html">Dungeon Generator</a>
+		           <a href="Jazz&Azul.html">Jazz And Azul</a>
+           </div>
+           </div>
+        </div>
+  <pageTitle>Subtitle Manager</pageTitle>
+
+  <descriptionInfo> To add more accessibility to the game I worked on implementing subtitles to the cut scenes and world dialogue. 
+    <br>There are two functions that make up the manager the first is CreateSubtitleData() 
+    that you can see below this function takes in a text file then splits each line and adds them into the string list.</br>
+	<br>After this I go through each line and find ones that just have numbers on this means they are timings and add them to their own list.</br>
+  </descriptionInfo>
+<codeDisplay><pre>
+public static IEnumerator PlaySubtitles(TextAsset _subtitleFile, float _waitDelay)//This coroutine is called when playing subtitles.
+  {
+      if (_subtitleFile != null)
+      {
+          Self = GameObject.Find("SubtitleManager").transform.GetChild(0).gameObject;
+          textElement = GameObject.Find("SubtitleManager").transform.GetChild(0).GetChild(1).GetComponent();
+          textElement.text = "";
+          yield return new WaitForSeconds(_waitDelay);//Depending on the use case this waitDelay helps pause the subtitles until the dialogue has started. E.g Cutscenes.
+          List SubtitleLines = CreateSubtitleData(_subtitleFile).Item1;
+          List SubtitleDuration = CreateSubtitleData(_subtitleFile).Item2;//SubtitleDuration is how long the line should be displayed for.
+          if (SubtitleLines.Count == SubtitleDuration.Count)
+          {
+              Self.SetActive(true);
+              int subtitleIndex = 0;
+              while (subtitleIndex < SubtitleLines.Count)//Loops through each of the dialogue lines and displays them.
+              {
+                  textElement.text = SubtitleLines[subtitleIndex];
+                  yield return new WaitForSeconds(SubtitleDuration[subtitleIndex]);
+                  subtitleIndex++;
+              }
+              Self.SetActive(false);
+          }
+      }
+      else
+      {
+          Debug.LogError("No subtitle data found!");
+      }
+  }
+</codeDisplay></pre>
+ <descriptionInfo> <br>SkipCutscene() has a timer that ticks down and when it reaches zero the clip is stopped and the games load function starts.</br></descriptionInfo>
+</body>
+</html>
