@@ -1,5 +1,4 @@
 
-
 pageTitle{
    display: block;
   font-size: 4em;
@@ -24,11 +23,18 @@ descriptionTitle{
   display: block;
   font-size: 2em;
   font-weight: bold;
-  text-align:left;
+  text-align:center;
   font-family:calibri;
   color: #E5E9E9;
-  margin-left: 25px;
   }
+descriptionInfo{
+    display: block;
+    font-size: 1em;
+    text-align:center;
+    font-weight: bold;
+    font-family:calibri;
+    color: #E5E9E9;
+}
 body{
      background-color: #346D58;
     }
