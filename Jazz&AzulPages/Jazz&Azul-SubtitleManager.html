@@ -29,7 +29,7 @@
 	<br>I loop through each string and update the text element after the current delay.</br>
   </descriptionInfo>
  <descriptionTitle> PlaySubtitles Function </descriptionTitle>
-<codeDisplay><pre><descriptionInfo>
+<codeDisplay><pre>
 public static IEnumerator PlaySubtitles(TextAsset _subtitleFile, float _waitDelay)//This coroutine is called when playing subtitles.
   {
       if (_subtitleFile != null)
@@ -58,7 +58,7 @@ public static IEnumerator PlaySubtitles(TextAsset _subtitleFile, float _waitDela
           Debug.LogError("No subtitle data found!");
       }
   }
-</codeDisplay></pre></descriptionInfo>
+</codeDisplay></pre>
  <descriptionTitle> Subtitle Editor Windows </descriptionTitle>
 	<descriptionInfo> There are two windows Creator and Editor. There are two functions that make up the manager the first is CreateSubtitleData(). 
    <br>The creator window allows the user to input text and delays the create a subtitle file.</br>
