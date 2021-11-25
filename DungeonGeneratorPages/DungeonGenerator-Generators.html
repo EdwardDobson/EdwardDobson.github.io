@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "../CSS/Global.css">
+</head>
+<body>
+      <div class="dropdown">
+       <div class="container">
+        <img src="../Assets/DropdownImage.png" alt="DropdownImage">
+           <div class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="ContactMe.html">Contact Me</a>
+                  <a href="../Jazz&AzulPages/Jazz&Azul.html">Jazz And Azul</a>
+                  <a href="SoleSweep.html">Sole Sweep</a>   
+                  <a href="BugOpsArcade.html">BugOps Arcade</a>
+                  <a href="Cuber.html">Cuber</a>
+                  <a href="DungeonGenerator.html">Dungeon Generator</a>
+           </div>
+           </div>
+        </div>
+  <pageTitle>Generators</pageTitle>
+ 
+<descriptionTitle>Floor</descriptionTitle>
+  <descriptionInfo>To increase the variety of the dungeon I have developed a few different types of rooms.
+        <br> I do this by taking a point in the dungeon and then picking which room type to use.</br></descriptionInfo>
+  
+  <descriptionTitle>Walls</descriptionTitle>
+  <descriptionInfo>My first approach was to place tiles around the floor edges.
+        <br>This caused some position issues with path end/start points.</br>
+      <br>The new approach I took was to create another tile map and place the wall tiles in all of the empty tiles within the floor map.</br>
+      <br>This had three main benefits the first was the build time was decreased and it allowed me to implement a dig mechanic.</br</descriptionInfo>
+    <br>Finally this also fixed the path issues I was having.</br></descriptionInfo>
+
+  <descriptionTitle>Paths</descriptionTitle>
+  <descriptionInfo>To form a path I take two build points and then place tiles in the direction needed.</descriptionInfo>
+
+  <descriptionTitle>Custom Block Variations</descriptionTitle>
+  <descriptionInfo>What this project allowed me to do is implement custom blocks/tiles. 
+    <br>These allow tiles to have attributes that can modify players stats such as speed and health, while still being a tile.</br></descriptionInfo>
+  
+      <img src="../Assets/Main Inventory Window.png" alt="Main Inventory Window" style="width:350px;height:300px;margin:0px 0px 35px 35px;">
+      <img src="../Assets/Main Survival Inventory Window.png" alt="Main Survival Inventory Window" style="width:300px;height:350px;margin:0px 0px 35px 35px;">
+      <img src="../Assets/Floors Inventory Window.png" alt="Floors Inventory Window" style="width:350px;height:300px;margin:0px 0px 35px 35px;">
+</body>
