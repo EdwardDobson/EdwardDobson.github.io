@@ -129,7 +129,7 @@ codeDisplay {
   padding: 2px;
   font-size: 1em;
 }
-.centerImage {
+centerImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
