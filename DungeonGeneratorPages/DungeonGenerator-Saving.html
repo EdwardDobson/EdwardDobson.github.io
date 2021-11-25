@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "../CSS/Global.css">
+</head>
+<body>
+      <div class="dropdown">
+       <div class="container">
+        <img src="../Assets/DropdownImage.png" alt="DropdownImage">
+           <div class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="ContactMe.html">Contact Me</a>
+                  <a href="../Jazz&AzulPages/Jazz&Azul.html">Jazz And Azul</a>
+                  <a href="SoleSweep.html">Sole Sweep</a>   
+                  <a href="BugOpsArcade.html">BugOps Arcade</a>
+                  <a href="Cuber.html">Cuber</a>
+                  <a href="DungeonGenerator.html">Dungeon Generator</a>
+           </div>
+           </div>
+        </div>
+  <pageTitle>Saving</pageTitle>
+ 
+<descriptionTitle>Saving Method</descriptionTitle>
+  <descriptionInfo>I originally used a binary file to save the data, however this made it hard to debug and monitored the data that was being saved during testing.
+  <br>So I decided to move to a json file which allowed me to debug more easily.</br></descriptionInfo>
+   
+<descriptionTitle>What I Save/descriptionTitle>
+  <descriptionInfo>To make sure the file size doesn’t get too large I only saved the data that is needed. This data included the following.</br></descriptionInfo>
+  <ul>
+<li> <descriptionInfo>World Name</descriptionInfo> </li>
+<li> <descriptionInfo>Seed</descriptionInfo> </li>
+<li> <descriptionInfo>Seed Set</descriptionInfo> </li>
+<li> vMode Name</descriptionInfo> </li>
+<li> <descriptionInfo>Dungeon Variable</descriptionInfo>s </li>
+<li> <descriptionInfo>Player Position</descriptionInfo> </li>
+<li> <descriptionInfo>Modified Titles</descriptionInfo> </li>
+<li> <descriptionInfo>Player Inventory</descriptionInfo> </li>
+</ul>
+      <img src="../Assets/SaveFlow.png" alt="SaveFlow" style="width:400px;height:390px;margin:0px 0px 35px 35px;">
+</body>
+</html>
