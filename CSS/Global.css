@@ -116,6 +116,7 @@ introduction
 .column {
   flex: 50%;
   padding: 0 4px;
+    vertical-align: middle;
 }
 
 .column img {
