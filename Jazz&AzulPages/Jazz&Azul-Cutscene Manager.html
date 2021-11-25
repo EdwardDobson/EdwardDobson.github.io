@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <link rel = "stylesheet" href = "Global.css">
+   <link rel = "stylesheet" href = "../CSS/Global.css">
 </head>
 <body>
       <div class="dropdown">
        <div class="container">
-        <img src="Assets/DropdownImage.png" alt="DropdownImage">
+        <img src="../Assets/DropdownImage.png" alt="DropdownImage">
            <div class="dropdown-content">
-               <a href="index.html">Home</a>
-               <a href="ContactMe.html">Contact Me</a>
-               <a href="BugOpsArcade.html">BugOps Arcade</a>
-               <a href="SoleSweep.html">Sole Sweep</a>
-               <a href="Cuber.html">Cuber</a>
-               <a href="DungeonGenerator.html">Dungeon Generator</a>
-		           <a href="Jazz&Azul.html">Jazz And Azul</a>
+               <a href="../index.html">Home</a>
+               <a href="../ContactMe.html">Contact Me</a>
+               <a href="../BugOpsArcade.html">BugOps Arcade</a>
+               <a href="../SoleSweep.html">Sole Sweep</a>
+               <a href="../Cuber.html">Cuber</a>
+               <a href="../DungeonGeneratorPages/DungeonGenerator.html">Dungeon Generator</a>
+		<a href="Jazz&Azul.html">Jazz And Azul</a>
            </div>
            </div>
         </div>
@@ -29,7 +29,7 @@ public void PlayCutscene(string _cutsceneName)
     {
         videoPlayer.clip = null;
         SkipTimer = 1;
-        for (int i = 0; i &lt; CutsceneDatas.Length; i++)
+        for (int i = 0; i < CutsceneDatas.Length; i++)
         {
             if (CutsceneDatas[i].Clip.name == _cutsceneName)
             {
@@ -62,7 +62,7 @@ public void PlayCutscene(string _cutsceneName)
 <codeDisplay><pre>
 public void SkipCutscene()
     {
-        if (Input.GetKey(KeyCode.Space) &amp;&amp; videoPlayer.isPlaying)
+        if (Input.GetKey(KeyCode.Space) && videoPlayer.isPlaying)
         {
             SkipTimer -= Time.deltaTime;
             skipSprite.gameObject.SetActive(true);
