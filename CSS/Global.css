@@ -115,6 +115,10 @@ introduction
   flex: 50%;
   padding: 5px;
 }
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
 codeDisplay {
   font-family:calibri;
   font-weight: bold;
