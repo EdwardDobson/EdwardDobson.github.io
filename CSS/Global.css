@@ -132,6 +132,5 @@ codeDisplay {
   width: 10%;
 }
 .aligned{
-   display: flex;
    align-items:center;
 }
